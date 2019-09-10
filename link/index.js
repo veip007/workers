@@ -366,11 +366,11 @@ app.use( View() )
 
 app.router('get','/gd/:id' , async (ctx) => {
   ctx.render( await googleDriveCtrl(ctx) )
-})
+})  /** 若直连被GD认定为欺诈，可更改/gd/ 为其他值，例如/aa/ **/
 
 app.router('get','/gda/:id' , async (ctx) => {
   ctx.render( await googleDriveCtrl(ctx) )
-})
+})  /** 若直连被GD认定为欺诈，可更改/gda/ 为其他值，例如/gdd/ 或者/aa/ 等其他 **/
 
 app.router('get' , '/lanzou/:id' , async (ctx) => {
   ctx.render( await lanzouCtrl(ctx) )
